@@ -1,0 +1,18 @@
+﻿@model InteractiveMap.Models.Legends_AllType
+
+<div class="col-xs-12 col-sm-12">
+    <ul class="metro-icons">
+        @foreach (var legends in Model.legends_All)
+        {
+            <li><img src=@legends.imageURL> @legends.subtitle</li>
+        }
+    </ul>
+</div>
+
+@*<div class="col-xs-12 col-sm-12">
+    <ul class="metro-icons">
+        <li><img src="/~/media/F2730C8A-20C2-452E-8ABD-800548A83D21.ashx"> London Underground</li>
+        <li><img src="/~/media/B71A88DB-313F-4235-88CE-FBC2277584DB.ashx"> London Overground</li>
+        <li><img src="/~/media/A2112302-F06A-456B-8A3E-679346748B32.ashx">Tramlink</li>
+    </ul>
+</div>*@

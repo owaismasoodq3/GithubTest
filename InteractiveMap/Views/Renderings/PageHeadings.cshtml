@@ -1,0 +1,38 @@
+﻿@using Sitecore.Mvc
+<div class="Our-network">
+
+    <div class="jumbotron">
+        <h1>@Html.Sitecore().Field("NetworkTitle")</h1>
+        <p class="hidden-xs">@Html.Sitecore().Field("NetworkSubtitle")</p>
+        <div class="form-network">
+           <div class="alert alert-danger text-left error" style="display:none"></div>
+           <div class="forms-custom"> <input type="text" id="txtSearch" class="form-control" placeholder="Please enter 2 or more characters">
+            
+            <button class="btn" id="btnSearch">Search Station</button></div>
+           
+        </div>
+    </div>
+
+</div>
+<style>
+.error {
+    font-size: 14px;
+    width: 81%;
+    margin: 20px auto;
+    padding: 10px;
+}
+.error::after {
+    content: "\f0d7";
+    font-family: font;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    color: #b11c1c;
+}
+
+</style>

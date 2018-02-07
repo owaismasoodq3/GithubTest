@@ -1,0 +1,214 @@
+﻿@model InteractiveMap.Models.Legends_AllType
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href='/~/media/Images/Interactive Map/NetworkMap.ashx' id="btnMapDownload" download>
+                    <button class="btn search-station">Download our network map</button>
+                </a>
+                <button id="btnexitFullscreenIOS" class="btn btn-info " style="position: absolute;background: rgb(0, 0, 0);border: 1px solid rgb(0, 0, 0);bottom: 40px;margin:  0 auto;left:  0;right:  0;width: 80px;">Close</button>
+            </div>
+            <div class="col-sm-6">
+                <div class="map-markers pull-right">
+                    <a href=""><i class="fa fa-repeat" id="reset" aria-hidden="true"></i></a>
+                    <a href="" class="hidden-xs" id="zoom-out"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                    <a href="" class="hidden-xs" id="zoom-in"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a href="" class="full-screen-open"><img src="/~/media/Images/Interactive Map/General/full-size.ashx" style="cursor:pointer"></a>
+                    <a href="#legend-collapse" class="hidden-xs" data-toggle="collapse"><img src="/~/media/Images/Interactive Map/General/info.ashx"></a>
+                    <a  id="mobile-i" class="hidden-sm hidden-md hidden-lg mobile-info"><img src="/~/media/Images/Interactive Map/General/info.ashx"></a>
+                    <div class="row map-legends-mobile hidden-sm hidden-md hidden-lg">
+                        <div class="col-sm-12 col-xs-12 map-legends">
+                            <div class="col-sm-12 col-xs-12 p-mob-l-0  p-mob-r-0">
+                                <h4 class="m-t-0">Stations</h4>
+
+                                <div class="stations-list">
+
+                                    @foreach (var legend in Model.legends_All)
+                                    {
+                                        if (@legend.subtitle != "" || @legend.imageURL != null)
+                                        {
+                                        <div class="managed  col-xs-6 p-mob-l-0 @legend.subtitle.ToLower()">
+                                            <img src=@legend.imageURL class="img-responsive">
+                                            <p>@legend.subtitle</p>
+                                        </div>
+                                        }
+                                        else { }
+                                    }
+
+
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <h4 class="connections-to-h4">Connections to:</h4>
+
+                                <div class="connections-to">
+                                    <div class="col-xs-4 others p-l-0">
+                                        <img src="/~/media/Images/Interactive Map/Legends/others.ashx" class="img-responsive">
+                                        <p>Other Train operators</p>
+                                    </div>
+                                    <div class="col-xs-4 others">
+                                        <img src="/~/media/Images/Interactive Map/Legends/bus-links.ashx" class="img-responsive">
+                                        <p>Bus Links <br /><br /><br /></p>
+                                    </div>
+                                    <div class="col-xs-4 ferry-links p-l-0">
+                                        <img src="/~/media/Images/Interactive Map/Legends/ferrylinks.ashx" class="img-responsive">
+                                        <p>Ferry Links</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                
+                               
+                               
+                          
+                            <div class="col-xs-12 p-l-0">
+                               
+                                <ul class="metro-icons">
+                                    <li style="margin-right:10px;"><img src="/~/media/Images/Interactive Map/Legends/Underground.ashx"> London Underground</li>
+                                    <li><img src="/~/media/Images/Interactive Map/Legends/Tramlink.ashx">Tramlink</li>
+                                    <li><img src="/~/media/Images/Interactive Map/Legends/London_Overground.ashx"> London Overground</li>
+                                   
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row collapse hidden-xs  map-legends" id="legend-collapse">
+            <div class="col-sm-12 col-xs-12 col-md-12">
+
+                <div class="col-sm-12 col-xs-12 col-md-12">
+                    <h3>Stations</h3>
+                </div>
+
+                <div class="stations-list col-xs-12 col-sm-12 col-md-12 p-l-0">
+                    @foreach (var legend in Model.legends_All)
+                    {
+                        if (@legend.subtitle != "" || @legend.imageURL != null)
+                        {
+                        <div class="col-sm-2 col-xs-4 col-md-2 @legend.subtitle.ToLower()">
+                            <img src=@legend.imageURL class="img-responsive">
+                            <p>@legend.subtitle</p>
+                        </div>
+                        }
+                    }
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 map-connections">
+
+                    <h4>Connections to:</h4>
+
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-4 col-xs-4 col-md-4 others p-l-0">
+                        <img src="/~/media/Images/Interactive Map/Legends/others.ashx" class="img-responsive">
+                        <p>Other Train operators</p>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 col-md-4 others">
+                        <img src="/~/media/Images/Interactive Map/Legends/bus-links.ashx" class="img-responsive">
+                        <p>Bus Links</p>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 col-md-4 ferry-links">
+                        <img src="/~/media/Images/Interactive Map/Legends/ferrylinks.ashx" class="img-responsive">
+                        <p>Ferry Links</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <ul class="metro-icons">
+                        <li><img src="/~/media/Images/Interactive Map/Legends/Underground.ashx"> London Underground</li>
+                        <li><img src="/~/media/Images/Interactive Map/Legends/London_Overground.ashx"> London Overground</li>
+                        <li><img src="/~/media/Images/Interactive Map/Legends/Tramlink.ashx">Tramlink</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    $('#btnMapDownload').click()
+  
+    $("#mobile-i").click(function () {
+        $(".map-legends-mobile").toggle();
+    });
+    $(document).ready(function () {
+
+       
+
+
+
+        $('#btnexitFullscreen').hide();
+        $('#btnexitFullscreenIOS').hide();
+
+        
+        $('.full-screen-open').on('click', function () {
+            $('.map-svg-container').fullScreen(true);
+            $('#btnexitFullscreen').show();
+            var isMobile = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function () {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function () {
+                    return (isMobile.iOS());
+                }
+            };
+
+            if (isMobile.any()) {
+                $('.Our-network').hide();
+                $('header').hide()
+                $('footer').hide();
+                $('#btnexitFullscreenIOS').show();
+                $('#btnexitFullscreen').hide();
+                $('.search-station').hide();
+              
+
+            }
+            else {
+                $('.search-station').show();
+                $('.Our-network').show();
+                $('header').show()
+                $('footer').show();
+                $('#btnexitFullscreenIOS').hide();
+                $('#btnexitFullscreen').show();
+               
+            }
+            return false;
+        });
+        $(document).bind("fullscreenchange", function () {
+            if (($(document).fullScreen() ? "on" : "off") === "off") {
+                $('#btnexitFullscreen').hide();
+            }
+        });
+        $('#btnexitFullscreen').click(function () {
+            $('.map-svg-container').fullScreen(false);
+        });
+
+        $('#btnexitFullscreenIOS').click(function () {
+            $('.Our-network').show();
+            $('header').show()
+            $('footer').show();
+            $('#btnexitFullscreenIOS').hide();
+            $('#btnexitFullscreen').hide();
+            $('.search-station').show();
+        });
+    });
+</script>
+
+
+

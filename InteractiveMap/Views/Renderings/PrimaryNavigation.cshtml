@@ -1,0 +1,85 @@
+﻿@using Sitecore.Mvc
+
+    <!-- Header code starts here -->
+    <header class="">
+
+        <div class="top-header-line">
+            <div class="outer-section">
+                <div class="custom-wrapper">
+                    <ul class="header-account">
+                        <li><a href="https://tickets.southwesternrailway.com/sw/en/account/orderhistory"><i class="fa fa-user-circle" aria-hidden="true"></i>My Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- custom-wrapper -->
+        <div class="second-header-bottom" id="stickyheader">
+            <div class="outer-section">
+                <div class="custom-wrapper">
+                    <a class="logo" href="https://www.southwesternrailway.com/" title="">
+                        @*<img alt="South Western Railway" src="img\SWR-logo.svg">*@
+                        <img alt="South Western Railway" src="/~/media/Images/Interactive Map/General/SWR-logo.ashx">
+                    </a>
+                    <ul class="top-links-nav hidden-mobile">
+                        <li>
+                            @Html.Sitecore().BeginField("TrainTickets_Link", new { text = @Html.Sitecore().Field("TrainTickets") })
+                            @Html.Sitecore().EndField()
+                        </li>
+                        <li>
+                            @Html.Sitecore().BeginField("PlanMyJourney_Link", new { text = @Html.Sitecore().Field("PlanMyJourney") })
+                            @Html.Sitecore().EndField()
+                        </li>
+                        <li>
+                            @Html.Sitecore().BeginField("TravellingWithUs_Link", new { text = @Html.Sitecore().Field("TravellingWithUs") })
+                            @Html.Sitecore().EndField()
+                        </li>
+                        <li>
+                            @Html.Sitecore().BeginField("DestinationsAndOffers_Link", new { text = @Html.Sitecore().Field("DestinationsAndOffers") })
+                            @Html.Sitecore().EndField()
+                        </li>
+                        <li>
+                            @Html.Sitecore().BeginField("HelpAndSupport_Link", new { text = @Html.Sitecore().Field("HelpAndSupport") })
+                            @Html.Sitecore().EndField()
+                        </li>
+
+                    </ul>
+                    <div class="side-menu-mobile menu-collapse-mobile hidden-desktop">
+                        <span id="menuIcon" class="hamburger">&#9776;</span>
+                        <div id="mySidenav" class="sidenav ">
+                            <ul>
+                                <li class="Menu"><a href="#">Menu</a></li>
+                                <li>
+                                    @Html.Sitecore().BeginField("TrainTickets_Link", new { text = @Html.Sitecore().Field("TrainTickets") })
+                                    @Html.Sitecore().EndField()
+                                </li>
+                                <li>
+                                    @Html.Sitecore().BeginField("PlanMyJourney_Link", new { text = @Html.Sitecore().Field("PlanMyJourney") })
+                                    @Html.Sitecore().EndField()
+                                </li>
+                                <li>
+                                    @Html.Sitecore().BeginField("TravellingWithUs_Link", new { text = @Html.Sitecore().Field("TravellingWithUs") })
+                                    @Html.Sitecore().EndField()
+                                </li>
+                                <li>
+                                    @Html.Sitecore().BeginField("DestinationsAndOffers_Link", new { text = @Html.Sitecore().Field("DestinationsAndOffers") })
+                                    @Html.Sitecore().EndField()
+                                </li>
+                                <li>
+                                    @Html.Sitecore().BeginField("HelpAndSupport_Link", new { text = @Html.Sitecore().Field("HelpAndSupport") })
+                                    @Html.Sitecore().EndField()
+                                </li>
+                                <li><a href="/">My Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- custom-wrapper -->
+
+
+
+    </header>
+
+

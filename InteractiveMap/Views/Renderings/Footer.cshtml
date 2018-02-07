@@ -1,0 +1,164 @@
+﻿@using Sitecore.Mvc
+
+<!-- footer starts here -->
+<footer>
+    <div class="footer-social-links">
+        <div class="outer-section">
+            <div class="custom-wrapper">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/sw_help" target="_blank" class="twitter">twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/swrailway" target="_blank" class="facebook">facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/SW_Railway" target="_blank" class="instagram">instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="outer-section">
+        <div class="custom-wrapper">
+            <div class="col3">
+                <ul class="footer-list">
+                    <li>
+                        <a>Helpful links</a>
+                        <ul>
+                            <li>
+                                @Html.Sitecore().BeginField("ContactUs_Link", new { text = @Html.Sitecore().Field("ContactUs") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("TrainTicketsExplained_Link", new { text = @Html.Sitecore().Field("TrainTicketsExplained") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("HowToGetYourTickets_Link", new { text = @Html.Sitecore().Field("HowToGetYourTickets") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("LiveTrainTimes_Link", new { text = @Html.Sitecore().Field("LiveTrainTimes") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("RefundsAndCompensation_Link", new { text = @Html.Sitecore().Field("RefundsAndCompensation") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("DelayRepay_Link", new { text = @Html.Sitecore().Field("DelayRepay") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col3">
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://www.southwesternrailway.com/other/about-us">About us</a>
+                        <ul>
+                            <li>
+                                @Html.Sitecore().BeginField("OurPlan_Link", new { text = @Html.Sitecore().Field("OurPlan") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("Careers_Link", new { text = @Html.Sitecore().Field("Careers") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("PassengerCharter_Link", new { text = @Html.Sitecore().Field("PassengerCharter") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("OurPerformance_Link", new { text = @Html.Sitecore().Field("OurPerformance") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("FirstGroupAndMTRCompany_Link", new { text = @Html.Sitecore().Field("FirstGroupAndMTRCompany") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col3">
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://www.southwesternrailway.com/destinations-and-offers/destinations">Top destinations</a>
+                        <ul>
+                            <li>
+                                @Html.Sitecore().BeginField("TrainsToLondonWaterloo_Link", new { text = @Html.Sitecore().Field("TrainsToLondonWaterloo") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("TrainsToBournemouth_Link", new { text = @Html.Sitecore().Field("TrainsToBournemouth") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("TrainsToExeter_Link", new { text = @Html.Sitecore().Field("TrainsToExeter") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("TrainsToSouthAmpton_Link", new { text = @Html.Sitecore().Field("TrainsToSouthAmpton") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                            <li>
+                                @Html.Sitecore().BeginField("SeeAllDestinations_Link", new { text = @Html.Sitecore().Field("SeeAllDestinations") })
+                                @Html.Sitecore().EndField()
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="outer-section">
+        <div class="custom-wrapper">
+            <ul class="footer-links">
+                <li>
+                    <a href="https://www.southwesternrailway.com/sitemap">Sitemap</a>
+                </li>
+                <li>
+                    <a href="https://www.southwesternrailway.com/terms-and-conditions">Terms &amp; Conditions</a>
+                </li>
+                <li>
+                    <a href="https://www.southwesternrailway.com/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="https://www.southwesternrailway.com/accessibility-features">Accessibility</a>
+                </li>
+                <li>
+                    <a href="https://www.southwesternrailway.com/travelling-with-us/assisted-travel">Assistance</a>
+                </li>
+                <li>
+                    <a href="https://www.southwesternrailway.com/other/news-and-media">Media Centre</a>
+                </li>
+                <li>
+                    <a href="https://www.southwesternrailway.com/~/media/pdfs/modern-slavery/firstgroup-plc-modern-slavery-and-human-trafficking-statement-2017.pdf?la=en">Modern Slavery Act</a>
+                </li>
+                <li>
+                    <a href="https://tickets.southwesternrailway.com/sw/en/account/OrderHistory">My Account</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="outer-section">
+        <div class="custom-wrapper">
+            <div class="footer-text">
+                <p>
+                    © South Western Railway 2017. A First Group and MTR company. All rights reserved.&nbsp;
+                    <br>
+                    <br> *Advance Purchase tickets must be purchased before 23:59 on the day prior to travel. Due to the limited availability, book early to avoid disappointment. ^Nectar Terms and Conditions apply.
+                </p>
+                <p>We use cookies to improve your experience. By using the site, you consent to the use of these cookies. If you'd like more information, please view our&nbsp;<a href="https://www.southwesternrailway.com/privacy-policy">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end here -->
+
+

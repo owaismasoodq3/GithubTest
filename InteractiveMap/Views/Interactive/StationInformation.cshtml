@@ -1,0 +1,28 @@
+﻿@model InteractiveMap.Models.StationInformation
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2><h2>Station Details for single get</h2></h2>
+
+<div id="Content">
+    Station Name: @Model.stationName <br />
+    CRS Code: @Model.CRSCode <br />
+    Station Address: @Model.stationAddress <br />
+    xPos: @Model.xPos <br />
+    yPos: @Model.yPox <br />
+    Status: @Model.status <br />
+    Station Title: @Model.statusTitle <br />
+    Station Message: @Model.statusMessage <br />
+    Start date: @Model.startDate <br />
+    End date: @Model.endDate <br />
+
+</div>
+
+
+<div class="col-xs-12 col-sm-12">
+    <ul class="metro-icons">
+            <li><img src=@Model.imageURL> Info Icon</li>
+    </ul>
+</div>
+

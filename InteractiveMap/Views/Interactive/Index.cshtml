@@ -1,0 +1,27 @@
+﻿@model InteractiveMap.Models.stationInformation_AllType
+
+<h2>Station Details for Bulk Get</h2>
+
+<div id="Content">
+    @foreach (var station in Model.stationInformation_All)
+    {
+        <div>
+            <p>Station Name: @station.stationName </p>
+            <p>CRS Code: @station.CRSCode </p>
+            <p>Station Address: @station.stationAddress </p>
+            <p>xPos: @station.xPos </p>
+            <p>yPos: @station.yPox </p>
+            <p>Status: @station.status </p>
+            <p>Station Icon: @station.statusIcon </p>
+            <p>Station Title: @station.statusTitle </p>
+            <p>Station Message: @station.statusMessage </p>
+            <p>Start date: @station.startDate </p>
+            <p>End date:@station.endDate </p>
+        </div>
+        <p>_________________________________</p>
+    }
+
+</div>
+
+
+

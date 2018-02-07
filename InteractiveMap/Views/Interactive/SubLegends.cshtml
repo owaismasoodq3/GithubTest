@@ -1,0 +1,27 @@
+﻿@model InteractiveMap.Models.Legends_AllType
+
+<div class="col-sm-12 col-xs-12 map-connections">
+
+    <h4>Connections to:</h4>
+
+</div>
+
+@foreach (var legend in Model.legends_All)
+            {
+    <div class="col-sm-1 col-xs-2 @legend.subtitle.ToLower()">
+        <img src=@legend.imageURL class="img-responsive">
+        <p>@legend.subtitle</p>
+    </div>
+}
+@*<div class="col-sm-1 col-xs-2 others">
+    <img src="img/others.png" class="img-responsive">
+    <p>Other Train operators</p>
+</div>
+<div class="col-sm-1 col-xs-2 others">
+    <img src="img/bus-links.png" class="img-responsive">
+    <p>Bus Links</p>
+</div>
+<div class="col-sm-1 col-xs-2 ferry-links">
+    <img src="img/ferrylinks.png" class="img-responsive">
+    <p>Ferry Links</p>
+</div>*@

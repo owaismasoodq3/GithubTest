@@ -1,0 +1,87 @@
+﻿
+<!DOCTYPE html>
+
+@using Sitecore.Mvc
+<html>
+<head>
+    <title>@Html.Sitecore().Field("PageTitle")</title>
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileImage" content="/Assets/img/favicons/ms-icon-144x144.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/template-style.css" rel="stylesheet">
+    <link href="/css/media.css" rel="stylesheet">
+    <script src="/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!-- can be removed if the jquery  is present in the js folder-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/jss/svg-pan-zoom.js"></script>
+    <link href="/css/AutoComplete/jquery-ui.css" rel="stylesheet" />
+    <script src="/Scripts/jquery.fullscreen.js"></script>
+    <script src="/Scripts/jquery-ui.js"></script>
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+    @*<script src="~/Scripts/svg-pan-zoom.js"></script>*@
+    <script src="/scripts/fastclick.js"></script>
+
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Field("TrainTickets")
+    </div>
+
+    <div id="MainPanel">
+        <div id="CenterColumn">
+            <div id="InnerCenter">
+                <div id="Content">
+                    @Html.Sitecore().Placeholder("main")
+                    @Html.Sitecore().Placeholder("main1")
+                    @Html.Sitecore().Placeholder("main2")
+                    @Html.Sitecore().Placeholder("main3")
+                    @Html.Sitecore().Placeholder("main4")
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+    <!-- can be removed if the jquery  is present in the js folder-->
+    <script>
+	$(document).ready(function(){
+		$('#menuIcon').click(function(){
+		if($(this).hasClass('hamburger')){
+			$("#mySidenav").css('width',"100%");
+			$(this).removeClass('hamburger').addClass('cross');
+			$("body").css('overflow',"hidden");
+			$(this)[0].innerHTML = '&times;';
+		} else {
+			$("#mySidenav").css('width',"0");
+			$(this).removeClass('cross').addClass('hamburger');
+			$("body").css('overflow',"auto");
+			$(this)[0].innerHTML = '&#9776;';
+		}
+
+		})
+	})
+    </script>
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("stickyheader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
