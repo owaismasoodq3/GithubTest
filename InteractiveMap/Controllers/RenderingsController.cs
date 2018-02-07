@@ -11,7 +11,7 @@ namespace InteractiveMap.Controllers
         // GET: Renderings
         public ActionResult Index()
         {
-            string testInProgress = "";
+
             return View("Map");
         }
     }
