@@ -11,7 +11,6 @@ namespace InteractiveMap.Controllers
         // GET: Renderings
         public ActionResult Index()
         {
-            string testVariable = "this is to test git";
             return View("Map");
         }
     }
