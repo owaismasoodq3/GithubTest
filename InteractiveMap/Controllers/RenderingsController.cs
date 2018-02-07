@@ -11,7 +11,7 @@ namespace InteractiveMap.Controllers
         // GET: Renderings
         public ActionResult Index()
         {
-
+            string time = "6:30pm";
             return View("Map");
         }
     }
