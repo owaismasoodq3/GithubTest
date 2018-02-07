@@ -78,10 +78,10 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\HelloWorld\HelloWorld\bin\Sitecore.Kernel.dll</HintPath>
+      <HintPath>C:\Users\omasood\Documents\Visual Studio 2015\Projects\JourneyCheck\JourneyCheck\bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>..\..\HelloWorld\HelloWorld\bin\Sitecore.Mvc.dll</HintPath>
+      <HintPath>C:\Users\omasood\Documents\Visual Studio 2015\Projects\JourneyCheck\JourneyCheck\bin\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
